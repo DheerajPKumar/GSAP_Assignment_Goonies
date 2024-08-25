@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.container {
+  width: 100vw;
+}
+.container__navbar {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  text-decoration: none;
+  padding-top: 3px;
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+}
+.container__navbar-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+.container__navbar-link {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+.container__navbar-redirect {
+  text-decoration: none;
+  color: white;
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
