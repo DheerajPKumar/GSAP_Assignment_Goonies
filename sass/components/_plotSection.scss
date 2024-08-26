@@ -1,0 +1,103 @@
+.container{
+    &__plotsection{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        &-background, &-main, &-scroll{
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-background{
+            z-index: -1;
+        }
+
+        &-backgroundImage{
+            width: 100vw;
+            height: 100vh;
+            transition: filter 0.3s ease-out;
+        }
+
+        &-main{
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &-heading{
+            font-size:50px;
+            color: #fff;
+            line-height: 40px;
+            font-weight: 400;
+            text-align: center;
+            margin:0;
+        }
+
+        &-headingImage{
+            margin-top: 10px;
+            width: 420px;
+            height: 98.5px; 
+        }
+
+        &-scroll{
+            z-index: 1;
+        }
+
+        &-scrollImage{
+            width: 100vw;
+            height: 150vh;
+            transform: scaleX(1.05);  
+            transition: filter 0.3s ease-out;
+            // opacity: 1;
+        }
+
+        &-textcontainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            justify-content: center; 
+            position: absolute;   
+            top: 50%;                 
+            left: 50%;                
+            transform: translate(-50%, -50%);
+            width: 40%;              
+            max-width: 600px;         
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            z-index: 1000;  
+            // opacity: 1;
+        }
+
+        &-text{
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        &-para{
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+        }
+
+        // &-navigationline{
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 50%;
+        //     width: 2px; 
+        //     height: 0px;
+        //     background-color: #fff;
+        //     transform: translateX(-50%); 
+        //     transition: height 0.3s;
+        //     // opacity: 1; 
+        // }
+    }
+}
