@@ -1,14 +1,12 @@
-
-.gooniessection{
+.gooniessection {
     overflow: hidden;
 }
 
-.container{
-
-    &__goonies{
+.container {
+    &__goonies {
         z-index: 1000;
 
-        &-characters{
+        &-characters {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -19,15 +17,19 @@
             margin-bottom: 200px;
         }
 
-        &-mikey, &-chunk, &-data, &-mouth{
+        &-mikey,
+        &-chunk,
+        &-data,
+        &-mouth {
             width: 25%;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+            overflow: hidden;
         }
 
-        &-cardimage{
+        &-cardimage {
             max-width: 100%;
             height: 100vh;
             display: block;
@@ -35,18 +37,17 @@
             opacity: 0.7;
             cursor: pointer;
             object-fit: cover;
+            transform-origin: center center;
 
-            &:hover{
-                transform: scale(1.02);
+            &:hover {
+                transform: scale(1.05);
                 opacity: 1;
-            }
-
-            &:hover{
+                overflow: hidden;
                 display: block;
             }
         }
 
-        &-carddata{
+        &-carddata {
             position: absolute;
             bottom: 10px;
             left: 10px;
@@ -55,17 +56,97 @@
             // display: none;
         }
 
-        &-cardheding{
+        &-cardheding {
             margin-bottom: 4px;
             font-size: 26px;
             line-height: 26px;
         }
 
-        &-cardpara{
+        &-cardpara {
             margin-right: 9px;
             color: #fff;
             font-size: 11px;
             text-decoration: none;
+        }
+    }
+
+    &__never {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        box-sizing: border-box;
+        margin-bottom: 100px;
+
+        &-title {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 40px;
+            line-height: 44px;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.5s;
+            position: absolute;
+        }
+
+        &-first,
+        &-third {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &-image1C {
+            margin-left: 14rem;
+        }
+
+        &-image1{
+            width: 200px;
+            height: 200px;
+        }
+
+        &-image4C {
+            margin-left: 22rem;
+        }
+
+        &-image5C,
+        &-image3C {
+            margin-right: 15rem;
+            // margin-top: 10rem;
+        }
+
+        &-image4{
+            width: 170px;
+            height:170px;
+        }
+
+        // &-image2{
+        //     width: 100px;
+        //     height: 100px;
+        // }
+        
+        &-image3,
+        &-image5 {
+            width: 120px;
+            height: 120px;
+        }
+
+        &-second{
+            position: relative;
+        }
+
+        &-image2{
+            width:230px;
+            height: 700px;
+            transform: rotate(40deg);
+            display: block;
         }
     }
 }

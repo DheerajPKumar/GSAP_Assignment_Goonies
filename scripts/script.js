@@ -14,12 +14,13 @@ gsap.to(mainSection, {
     start: "top top", 
     end: "top+=200px",
     scrub: 0.3,
-    // markers: true,
+    markers: true,
   },
 });
 
 const timelineHeader = gsap.timeline({
   scrollTrigger: {
+    // id: "zoom",
     trigger: sectionId,
     scroller: "body",
     scrub: 0.3,
@@ -43,7 +44,7 @@ gsap.to(textContainer, {
     start: "top+=200px",
     end: "top+=600px",
     scrub: 0.3,
-    markers: true,
+    // markers: true,
   },
 });
 

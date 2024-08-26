@@ -54,6 +54,7 @@
   flex-direction: column;
 }
 .container__plotsection-heading {
+  font-family: "Abuget", sans-serif;
   font-size: 50px;
   color: #fff;
   line-height: 40px;
@@ -123,6 +124,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .container__goonies-cardimage {
   max-width: 100%;
@@ -133,12 +135,12 @@
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
+  transform-origin: center center;
 }
 .container__goonies-cardimage:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   opacity: 1;
-}
-.container__goonies-cardimage:hover {
+  overflow: hidden;
   display: block;
 }
 .container__goonies-carddata {
@@ -158,6 +160,66 @@
   color: #fff;
   font-size: 11px;
   text-decoration: none;
+}
+.container__never {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+.container__never-title {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+}
+.container__never-first, .container__never-third {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container__never-image1C {
+  margin-left: 14rem;
+}
+.container__never-image1 {
+  width: 200px;
+  height: 200px;
+}
+.container__never-image4C {
+  margin-left: 22rem;
+}
+.container__never-image5C, .container__never-image3C {
+  margin-right: 15rem;
+}
+.container__never-image4 {
+  width: 170px;
+  height: 170px;
+}
+.container__never-image3, .container__never-image5 {
+  width: 120px;
+  height: 120px;
+}
+.container__never-second {
+  position: relative;
+}
+.container__never-image2 {
+  width: 230px;
+  height: 700px;
+  transform: rotate(40deg);
+  display: block;
 }
 
 * {
