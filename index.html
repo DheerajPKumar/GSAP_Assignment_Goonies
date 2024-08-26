@@ -4,21 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular" rel="stylesheet">
     <link rel="stylesheet" href="sass/styles.css">
     <title>The Goonies</title>
 </head>
 <body>
 
-    <div class="container"></div>
-    <nav class="container__navbar">
-        <ul class="container__navbar-links">
-            <li class="container__navbar-link"><a href="#plot" class="container__navbar-redirect">Plot</a></li>
-            <li class="container__navbar-link"><a href="#goonies" class="container__navbar-redirect">Goonies</a></li>
-            <li class="container__navbar-link"><a href="#credits" class="container__navbar-redirect">Credits</a></li>
-            <li class="container__navbar-link"><a href="#gallery" class="container__navbar-redirect">Gallery</a></li>        </ul>
-    </nav>
+    <div class="container">
+        <nav class="container__navbar">
+            <ul class="container__navbar-links">
+                <li class="container__navbar-link"><a href="#plot" class="container__navbar-redirect">Plot</a></li>
+                <li class="container__navbar-link"><a href="#goonies" class="container__navbar-redirect">Goonies</a></li>
+                <li class="container__navbar-link"><a href="#credits" class="container__navbar-redirect">Credits</a></li>
+                <li class="container__navbar-link"><a href="#gallery" class="container__navbar-redirect">Gallery</a></li>
+                <!-- <div class="container__navbar-progress"></div> -->
+            </ul>
+        </nav>
+        
+        <section id="plot">
+            <div class="container__plotsection">
+                <div class="container__plotsection-background">
+                    <img class="container__plotsection-backgroundImage"  src="assests/bgImage.png" alt="bgImage">
+                </div>
+                <div class="container__plotsection-main">
+                    <h1 class="container__plotsection-heading">the story of</h1>
+                    <img class="container__plotsection-headingImage" src="assests/headingImage.png" alt="headingImage">
+                </div>
+                <div class="container__plotsection-scroll">
+                    <img id="scrollImage" class="container__plotsection-scrollImage" src="assests/scrollImage.png" alt="scrollImage">
+                </div>
+                <div class="container__plotsection-textcontainer">
+                    <h1 class="container__plotsection-text">Plot</h1>
+                    <p class="container__plotsection-para">Facing foreclosure of their homes in the Goon Docks area of Astoria,
+                        Oregon to an expanding country club, a group of children who call themselves "the Goonies"
+                        gather for a final weekend together.</p>
+                    <!-- <div class="container__plotsection-navigationline"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="gooniessection" id="goonies">
+            <div class="container__goonies">
+                <div class="container__goonies-characters">
+                    <div class="container__goonies-mikey">
+                        <img src="assests/card1.jpeg" class="container__goonies-cardimage" alt="Mikey Image">
+                        <div class="container__goonies-carddata">
+                            <h1 class="container__goonies-cardheading">Mikey</h1>
+                            <p class="container__goonies-cardpara">More info -></p>
+                        </div>
+                    </div>
+                    <div class="chunk container__goonies-chunk">
+                        <img src="assests/card2.jpeg" class="container__goonies-cardimage" alt="Chunk Image">
+                        <div class="container__goonies-carddata">
+                            <h1 class="container__goonies-cardheading">Chunk</h1>
+                            <p class="container__goonies-cardpara">More info -> </p>
+                        </div>
+                    </div>
+                    <div class="data container__goonies-data">
+                        <img src="assests/card3.jpeg" class="container__goonies-cardimage" alt="Data Image">
+                        <div class="container__goonies-carddata">
+                            <h1 class="container__goonies-cardheading">Data </h1>
+                            <p class="container__goonies-cardpara">More info -> </p>
+                        </div>
+                    </div>
+                    <div class="mouth container__goonies-mouth">
+                        <img src="assests/card4.jpeg" class="container__goonies-cardimage" alt="Mouth Image">
+                        <div class="container__goonies-carddata">
+                            <h1 class="container__goonies-cardheading">Mouth</h1>
+                            <p class="container__goonies-cardpara"> More info -> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
