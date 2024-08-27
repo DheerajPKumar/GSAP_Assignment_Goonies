@@ -14,7 +14,7 @@ gsap.to(mainSection, {
     start: "top top", 
     end: "top+=200px",
     scrub: 0.3,
-    markers: true,
+    // markers: true,
   },
 });
 

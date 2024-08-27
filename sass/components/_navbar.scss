@@ -26,15 +26,15 @@
             display: block;
         }
 
-        // &-progress {
-        //     width: 5px;
-        //     height: 5px;
-        //     background-color: white;
-        //     border-radius: 50%;
-        //     position: absolute;
-        //     left: 200px;
-        //     top: 40px;
-        //     opacity: 1;
-        // }
+        &-progress {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 145px;
+            top: 30px;
+            opacity: 1;
+        }
     }
 }

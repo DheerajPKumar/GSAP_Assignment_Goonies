@@ -1,0 +1,366 @@
+.credits {
+    overflow: hidden;
+}
+
+.container {
+    &__credits1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px dotted rgba(250, 250, 250, 0.15);
+        color: white;
+
+        &-row {
+            display: flex;
+            width: 100vw;
+            height: 50vh;
+        }
+
+        &-releasedate {
+            flex: 1;
+            text-align: center;
+        }
+
+        &-releasedateC {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            border-right: 1px dotted rgba(250, 250, 250, 0.15);
+
+            &--year {
+                font-size: 40px;
+            }
+
+            &--text {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--date {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+
+        &-story {
+            position: relative;
+            flex: 1;
+        }
+
+        &-storyC {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            justify-content: flex-end;
+            text-align: left;
+            border-right: 1px dotted rgba(250, 250, 250, 0.15);
+            overflow: hidden;
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+                transition:
+                    transform 1.5s ease-in-out,
+                    opacity 1.5s ease-in-out;
+                transform-origin: center center;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    transform: opacity(1);
+                }
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+
+        &-production {
+            flex: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: left;
+            position: relative;
+        }
+
+        &-productionC {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                opacity: 0.5;
+                transition:
+                opacity 0.5s ease-in-out;
+                transition: transform 0.1s ease-out;
+                &:hover {
+                    opacity: 1;
+                    transform: opacity(1);
+                }
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__credits2 {
+        display: flex;
+        border-left: 1px solid rgba(250, 250, 250, 0.15);
+        border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+        border-right: 1px solid rgba(250, 250, 250, 0.15);
+        color: #fff;
+        width: 100vw;
+        height: 50vh;
+        overflow: hidden;
+
+        &-row {
+            display: flex;
+            color: #fff;
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        &-distributed,
+        &-budget,
+        &-music,
+        &-boxoffice {
+            flex: 1;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        &-distributedC {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-right: 1px dotted rgba(250, 250, 250, 0.15);
+
+            &--image {
+                width: 30%;
+                height: 30%;
+                object-fit: contain;
+            }
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+
+        &-budgetC {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px dotted rgba(250, 250, 250, 0.15);
+
+            &--text {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+
+        &-musicC {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-right: 1px dotted rgba(250, 250, 250, 0.15);
+
+            &--image {
+                width: 60%;
+                height: 60%;
+                object-fit: contain;
+                opacity: 0.5;
+                transition:
+                    transform 1.5s ease-in-out,
+                    opacity 1.5s ease-in-out;
+                transform-origin: center center;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    transform: opacity(1);
+                }
+            }
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+
+        &-boxofficeC {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--text {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            &--heading {
+                position: absolute;
+                bottom: 40px;
+                left: 20px;
+                font-size: 24px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 23px;
+            }
+
+            &--para {
+                position: absolute;
+                bottom: 15px;
+                left: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__skullpeople {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+        &-skullC {
+            height: 70vh;
+            position: relative;
+            z-index: -1;
+            // scale: 0.3;
+
+            &--image {
+                opacity: 0.1;
+                scale: 0.3;
+            }
+        }
+
+        &-peopleC {
+            &--image {
+                // margin-bottom: 100px;
+                opacity: 1;
+            }
+        }
+    }
+}

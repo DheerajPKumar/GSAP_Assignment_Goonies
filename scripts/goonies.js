@@ -78,4 +78,24 @@ document.addEventListener("DOMContentLoaded", function() {
             markers: false  
         }
     });
+
+    gsap.from(".container__skullpeople-skullC--image", {
+        scale: 0,
+        scrollTrigger: {
+            trigger: ".container__skullpeople", 
+            start: "top 80%",  
+            end: "bottom 20%", 
+            scrub: 0.3,
+        }
+    });
+
+    gsap.from(".container__skullpeople-peopleC--image", {
+        y: 400,
+        scrollTrigger: {
+            trigger: ".container__skullpeople", 
+            start: "top 100%", 
+            end: "bottom 20%", 
+            scrub: 0.3,
+        }
+    });
 });
