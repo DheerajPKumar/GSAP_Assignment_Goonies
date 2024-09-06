@@ -31,13 +31,14 @@
 .container__navigation {
   position: fixed;
   z-index: 10000;
-  bottom: 7%;
-  left: 7%;
-  width: 85%;
+  bottom: 5%;
+  left: 2%;
+  width: 95%;
 }
 .container__navigation-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .container__navigation-images {
   width: 15px;
@@ -50,6 +51,7 @@
 }
 .container__navigation-skullcontainer {
   position: relative;
+  display: inline-block;
 }
 .container__navigation-skullimage {
   display: block;
@@ -66,9 +68,10 @@
   bottom: 0;
   border: 0.1px solid #fff;
   border-radius: 50%;
-  animation: borderFade 1.5s infinite;
+  pointer-events: none;
+  animation: borderExpandFade 3s infinite;
 }
-@keyframes borderFade {
+@keyframes borderExpandFade {
   0% {
     top: 0;
     left: 0;
@@ -109,6 +112,7 @@
   text-decoration: none;
   color: #fff;
   display: block;
+  cursor: pointer;
 }
 .container__navbar-progress {
   width: 5px;
@@ -659,6 +663,45 @@
 }
 .container__skullpeople-peopleC--image {
   opacity: 1;
+}
+
+.flip {
+  overflow: hidden;
+  position: relative;
+}
+.flip::before, .flip::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.flip::before {
+  height: 2px;
+  bottom: 0;
+  transform-origin: center center;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.flip::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(0, 200%, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.flip:hover::before {
+  transform-origin: center center;
+  transform: scaleX(1);
+}
+.flip:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+.flip .spanEl {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.flip:hover .spanEl {
+  transform: translate3d(0, -200%, 0);
 }
 
 .container__gallerycontainers {
