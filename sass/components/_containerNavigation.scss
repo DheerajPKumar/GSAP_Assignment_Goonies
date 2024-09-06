@@ -4,14 +4,13 @@
     &__navigation{
         position: fixed;
         z-index: 10000;
-        bottom: 7%;
-        left: 7%;
-        width: 85%;
+        bottom: 5%;
+        left: 2%;
+        width: 95%;
         // box-sizing: content-box;
 
         &-buttons{
-            display: flex;
-            justify-content: space-between;
+            @include flexCenterBetween;
         }
 
         &-images{
@@ -25,6 +24,7 @@
 
         &-skullcontainer{
             position: relative;
+            display: inline-block;
         }
 
         &-skullimage{
@@ -43,11 +43,11 @@
             bottom: 0;
             border: 0.1px solid $color-white;
             border-radius: 50%;
-            animation: borderFade 1.5s infinite;
-            // animation-delay: 5s;
+            pointer-events: none;
+            animation: borderExpandFade 3s infinite;
         }
 
-        @keyframes borderFade {
+        @keyframes borderExpandFade {
             0% {
                 top: 0;
                 left: 0;

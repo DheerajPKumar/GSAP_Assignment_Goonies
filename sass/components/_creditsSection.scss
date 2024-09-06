@@ -356,4 +356,51 @@
         }
     }
 }
+
+// .flip {
+//     overflow: hidden;
+//     position: relative;
+  
+//     &::before,
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       width: 100%;
+//       left: 0;
+//     }
+  
+//     &::before {
+//       height: 2px;
+//       bottom: 0;
+//       transform-origin: center center;
+//       transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+//     }
+  
+//     &::after {
+//       content: attr(data-replace);
+//       height: 100%;
+//       top: 0;
+//       transform-origin: 100% 50%;
+//       transform: translate3d(0, 200%, 0);
+//       transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+//     }
+  
+//     &:hover::before {
+//       transform-origin: center center;
+//       transform: scaleX(1);
+//     }
+  
+//     &:hover::after {
+//       transform: translate3d(0, 0, 0);
+//     }
+  
+//     .spanEl {
+//       display: inline-block;
+//       transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+//     }
+  
+//     &:hover .spanEl {
+//       transform: translate3d(0, -200%, 0);
+//     }
+// }
   
