@@ -103,19 +103,6 @@ function updateBlur() {
         scrollY > textBoxBottom ? scrollY - textBoxBottom + "px" : "0px";
 
       drawLine.style.height = lineHeight;
-      drawLine.style.opacity = scrollY > textBoxBottom ? 1 : 0;
-      let maxVal = 200;
-      if ((lineHeight, 10) >= maxVal) {
-        gsap.to([".container__plotsection"], {
-          opacity: 0,
-          duration: 1,
-        });
-      } else {
-        gsap.to([".container__plotsection"], {
-          opacity: 1,
-          duration: 1,
-        });
-      }
     }
   }
 }
