@@ -49,6 +49,3 @@ gsap.fromTo(".container__navbar-progress", {
         ease: "power3.out",
     }
 });
-
-
-

@@ -26,9 +26,7 @@
       &--div3{
         height: 100%;
         width: 10%;
-
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         gap: 6px;
       }
 
@@ -122,9 +120,7 @@
       &--div5{
         height: 100%;
         width: 20%;
-
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         gap: 6px;
         
       }
@@ -142,8 +138,7 @@
       &--div7{
         height: 100%;
         width: 40%;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         gap: 6px;
       }
     }
@@ -153,39 +148,57 @@
       top: 50%;
       left: 50%; 
       transform: translate(-50%, -50%);
-      z-index: 10;
-      display: flex;
+      z-index: 1;
+      @include flexCenter;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
       &--heading{
         font-size: 44px;
         margin-bottom: 10px;
-        color: #fff;
+        color: $color-white;
+        // z-index: -1;
       }
 
       &--button{
         padding: 5px; 
         font-size: 16px; 
-        background-color: #000;
-        color: #fff;
+        background-color: $color-black;
+        color: $color-white;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
 
       &--backbutton{
-        padding: 5px; 
+        padding: 14px 17px; 
         font-size: 16px; 
-        background-color: #000;
-        color: #fff;
+        background-color: $color-black;
+        color: $color-white;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
         border-radius: 50%;
         opacity: 0;
       }
+    }
+
+    &-sharediv{
+      position: absolute;
+      bottom: -4%;
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      &--sharebtn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: $color-black;
+        color: $color-white;
+        font-size: 15px;
+        padding: 7px 10px;
+      }
+
     }
   }
 }

@@ -1,13 +1,10 @@
 .container{
     &__footer{
-        overflow: hidden;
-        display: flex;
+        @include flexCenter;     
         flex-direction: column;
-        justify-content: center; 
-        align-items: center;      
         position: relative;
         height: 100vh; 
-        color:white; 
+        color:$color-white; 
 
         &-subheading{
             font-size:15px;
@@ -18,12 +15,16 @@
             font-size:40px;
             margin-top: 20px;
             font-weight: 300;
+            transform: translateY(150px);
+            opacity: 0;
         }
 
         &-totop{
             text-decoration: none;
-            color: white;
+            color: $color-white;
             margin-top: 20px;
+            transform: translateY(160px);
+            opacity: 0;
         }
 
         &-author{

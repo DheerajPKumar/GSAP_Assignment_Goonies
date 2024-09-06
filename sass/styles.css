@@ -1,3 +1,91 @@
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  color: #fff;
+  font-size: 5rem;
+  opacity: 0.8;
+}
+.load__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+}
+.load__overlay-progressbar {
+  width: 100vw;
+  height: 105vh;
+  background: #000;
+  z-index: 4;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+.container__navigation {
+  position: fixed;
+  z-index: 10000;
+  bottom: 7%;
+  left: 7%;
+  width: 85%;
+}
+.container__navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.container__navigation-images {
+  width: 15px;
+  height: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.container__navigation-skullcontainer {
+  position: relative;
+}
+.container__navigation-skullimage {
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 7px;
+}
+.container__navigation-skullcontainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.1px solid #fff;
+  border-radius: 50%;
+  animation: borderFade 1.5s infinite;
+}
+@keyframes borderFade {
+  0% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 0.1px;
+  }
+  100% {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-width: 0.1px;
+    opacity: 0;
+  }
+}
+
 .container__navbar {
   position: fixed;
   top: 5%;
@@ -19,13 +107,13 @@
 }
 .container__navbar-redirect {
   text-decoration: none;
-  color: white;
+  color: #fff;
   display: block;
 }
 .container__navbar-progress {
   width: 5px;
   height: 5px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 50%;
   position: absolute;
   left: 145px;
@@ -59,8 +147,8 @@
   transform: translate(-50%, -50%);
   width: 20%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .container__plotsection-heading {
@@ -88,9 +176,9 @@
 }
 .container__plotsection-textcontainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -112,9 +200,9 @@
 }
 .container__plotsection-navigationline {
   position: absolute;
-  top: 100%;
+  top: 75%;
   left: 50%;
-  width: 2px;
+  width: 1px;
   height: 0px;
   background-color: #fff;
   transform: translateX(-50%);
@@ -130,9 +218,9 @@
 }
 .container__goonies-characters {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
   width: 100%;
   height: 100vh;
@@ -166,9 +254,10 @@
 .container__goonies-carddata {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 40px;
   color: #fff;
   padding: 10px;
+  display: none;
 }
 .container__goonies-cardheding {
   margin-bottom: 4px;
@@ -185,9 +274,9 @@
   position: relative;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 0;
   box-sizing: border-box;
   margin-bottom: 100px;
@@ -215,8 +304,9 @@
   transform: translateX(200%);
 }
 .container__never-image1 {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
+  opacity: 0.6;
 }
 .container__never-image4C {
   transform: translateX(200%);
@@ -225,13 +315,18 @@
   transform: translateX(-150%);
 }
 .container__never-image3C {
-  transform: translateX(-200%);
+  transform: translateX(-250%);
+  top: 20%;
 }
 .container__never-image4 {
   width: 170px;
   height: 170px;
 }
-.container__never-image3, .container__never-image5 {
+.container__never-image3 {
+  width: 120px;
+  height: 120px;
+}
+.container__never-image5 {
   width: 120px;
   height: 120px;
 }
@@ -254,7 +349,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px dotted rgba(250, 250, 250, 0.15);
-  color: white;
+  color: #fff;
 }
 .container__credits1-row {
   display: flex;
@@ -270,13 +365,17 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  flex-direction: column;
   border-right: 1px dotted rgba(250, 250, 250, 0.15);
 }
 .container__credits1-releasedateC--year {
   font-size: 40px;
+}
+.container__credits1-releasedateC--year2 {
+  font-size: 40px;
+  display: none;
 }
 .container__credits1-releasedateC--text {
   position: absolute;
@@ -343,7 +442,6 @@
 }
 .container__credits1-production {
   flex: 2;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -557,7 +655,7 @@
 }
 .container__skullpeople-skullC--image {
   opacity: 0.1;
-  scale: 0.3;
+  scale: 0.5;
 }
 .container__skullpeople-peopleC--image {
   opacity: 1;
@@ -703,11 +801,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .container__gallerycontainers-buttondiv--heading {
   font-size: 44px;
@@ -724,7 +822,7 @@
   transition: background-color 0.3s ease;
 }
 .container__gallerycontainers-buttondiv--backbutton {
-  padding: 5px;
+  padding: 14px 17px;
   font-size: 16px;
   background-color: #000;
   color: #fff;
@@ -734,16 +832,31 @@
   border-radius: 50%;
   opacity: 0;
 }
+.container__gallerycontainers-sharediv {
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.container__gallerycontainers-sharediv--sharebtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+  padding: 7px 10px;
+}
 
 .container__footer {
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
   height: 100vh;
-  color: white;
+  color: #fff;
 }
 .container__footer-subheading {
   font-size: 15px;
@@ -753,11 +866,15 @@
   font-size: 40px;
   margin-top: 20px;
   font-weight: 300;
+  transform: translateY(150px);
+  opacity: 0;
 }
 .container__footer-totop {
   text-decoration: none;
-  color: white;
+  color: #fff;
   margin-top: 20px;
+  transform: translateY(160px);
+  opacity: 0;
 }
 .container__footer-author {
   font-size: 15px;

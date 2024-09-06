@@ -50,8 +50,8 @@ backbtn.addEventListener("click", () => {
 
     gsap.to((".container__gallerycontainers-buttondiv"), {
         // transform: "translate (0%, 0%)",
-        top: "59%",
-        left: "52%",
+        top: "50%",
+        left: "50%",
         x: -50,
         y: -50,
         opacity: 1,

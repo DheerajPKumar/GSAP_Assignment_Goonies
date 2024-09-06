@@ -9,9 +9,7 @@
         padding-top: 3px;
 
         &-links {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            @include flexCenterAround;
         }
 
         &-link {
@@ -22,14 +20,14 @@
 
         &-redirect {
             text-decoration: none;
-            color: white;
+            color: $color-white;
             display: block;
         }
 
         &-progress {
             width: 5px;
             height: 5px;
-            background-color: white;
+            background-color: $color-white;
             border-radius: 50%;
             position: absolute;
             left: 145px;

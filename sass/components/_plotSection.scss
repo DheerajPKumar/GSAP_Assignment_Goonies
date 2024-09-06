@@ -27,16 +27,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter;
             flex-direction: column;
         }
 
         &-heading{
             font-family: "Abuget", sans-serif;
             font-size:50px;
-            color: #fff;
+            color: $color-white;
             line-height: 40px;
             font-weight: 400;
             text-align: center;
@@ -61,10 +59,8 @@
         }
 
         &-textcontainer{
-            display: flex;
+            @include flexCenter;
             flex-direction: column;
-            align-items: center;    
-            justify-content: center; 
             position: absolute;   
             top: 50%;                 
             left: 50%;                
@@ -72,7 +68,7 @@
             width: 40%;              
             max-width: 600px;         
             font-family: 'Montserrat', sans-serif;
-            color: #fff;
+            color: $color-white;
             z-index: 1000;  
         }
 
@@ -89,11 +85,11 @@
 
         &-navigationline{
             position: absolute;
-            top: 100%;
+            top: 75%;
             left: 50%;
-            width: 2px; 
+            width: 1px; 
             height: 0px;
-            background-color: #fff;
+            background-color: $color-white;
             transform: translateX(-50%); 
             transition: height 0.3s;
         }

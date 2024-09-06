@@ -10,7 +10,22 @@
     <title>The Goonies</title>
 </head>
 <body>
+    <h1 class="load">0</h1>
+    <div class="load__overlay">
+        <div class="load__overlay-progressbar"></div>
+    </div>
+
     <div class="container">
+
+        <div class="container__navigation">
+            <div class="container__navigation-buttons">
+                <div class="container__navigation-skullcontainer">
+                    <img class="container__navigation-images container__navigation-skullimage" src="https://uploads-ssl.webflow.com/5cff83ac2044e22cb8cf2f11/5d1ccf5390704ad21f992d8e_skull-p-500.png" alt="">
+                </div>
+                <img class="container__navigation-images" src="https://uploads-ssl.webflow.com/5cff83ac2044e22cb8cf2f11/5d10efb50442bf42883dc80d_speaker-icon.png" alt="">
+            </div>
+        </div>
+
         <nav class="container__navbar">
             <ul class="container__navbar-links">
                 <li class="container__navbar-link"><a href="#plot" class="container__navbar-redirect">Plot</a></li>
@@ -48,28 +63,28 @@
                 <div class="container__goonies-characters">
                     <div class="container__goonies-mikey">
                         <img src="assets/card1.jpeg" class="container__goonies-cardimage" alt="Mikey Image">
-                        <div class="container__goonies-carddata">
+                        <div class="container__goonies-carddata container__goonies-mikeydata">
                             <h1 class="container__goonies-cardheading">Mikey</h1>
                             <p class="container__goonies-cardpara">More info -></p>
                         </div>
                     </div>
                     <div class="chunk container__goonies-chunk">
                         <img src="assets/card2.jpeg" class="container__goonies-cardimage" alt="Chunk Image">
-                        <div class="container__goonies-carddata">
+                        <div class="container__goonies-carddata container__goonies-chunkdata">
                             <h1 class="container__goonies-cardheading">Chunk</h1>
                             <p class="container__goonies-cardpara">More info -> </p>
                         </div>
                     </div>
                     <div class="data container__goonies-data">
                         <img src="assets/card3.jpeg" class="container__goonies-cardimage" alt="Data Image">
-                        <div class="container__goonies-carddata">
+                        <div class="container__goonies-carddata container__goonies-datadata">
                             <h1 class="container__goonies-cardheading">Data </h1>
                             <p class="container__goonies-cardpara">More info -> </p>
                         </div>
                     </div>
                     <div class="mouth container__goonies-mouth">
                         <img src="assets/card4.jpeg" class="container__goonies-cardimage" alt="Mouth Image">
-                        <div class="container__goonies-carddata">
+                        <div class="container__goonies-carddata container__goonies-mouthdata">
                             <h1 class="container__goonies-cardheading">Mouth</h1>
                             <p class="container__goonies-cardpara"> More info -> </p>
                         </div>
@@ -106,7 +121,12 @@
                 <div class="container__credits1-row">
                     <div class="container__credits1-releasedate">
                         <div class="container__credits1-releasedateC">
-                            <h1 class="flip container__credits1-releasedateC--year" data-replace="1985"><span>1985</span></h1>
+                            <!-- <div class="container__credits1-releaseheadings">
+                                <h1 class="flip container__credits1-releaseheadings--year" data-replace="1985"><span>1985</span></h1>
+                                <h1 class="flip container__credits1-releaseheadings--year2" data-replace="1985"><span>1985</span></h1>
+                            </div> -->
+                            <h1 class="flip container__credits1-releasedateC--year" data-replace="1985"><span class="spanEl">1985</span></h1>
+                            <!-- <h1 class="flip container__credits1-releasedateC--year2" data-replace="1985"><span>1985</span></h1> -->
                             <p class="container__credits1-releasedateC--text">Release date</p>
                             <p class="container__credits1-releasedateC--date">June 7, 1985</p>
                         </div>
@@ -138,7 +158,7 @@
                     </div>
                     <div class="container__credits2-budget">
                         <div class="container__credits2-budgetC">
-                            <h1 class="flip container__credits2-budgetC--text" data-replace="$19M"><span>$19M</span></h1>
+                            <h1 class="flip container__credits2-budgetC--text" data-replace="$19M"><span class="spanEl">$19M</span></h1>
                             <p class="container__credits2-budgetC--heading">Budget</p>
                             <p class="container__credits2-budgetC--para">$19 Million</p>
                         </div>
@@ -152,7 +172,7 @@
                     </div>
                     <div class="container__credits2-boxoffice">
                         <div class="container__credits2-boxofficeC">
-                            <h1 class="flip container__credits2-boxofficeC--text" data-replace="$61M"><span>$61M</span></h1>
+                            <h1 class="flip container__credits2-boxofficeC--text" data-replace="$61M"><span class="spanEl">$61M</span></h1>
                             <p class="container__credits2-boxofficeC--heading">Box Office</p>
                             <p class="container__credits2-boxofficeC--para">$61 Million</p>
                         </div>
@@ -218,6 +238,9 @@
                     <button class="container__gallerycontainers-buttondiv--button">View Gallery</button>
                     <button class="container__gallerycontainers-buttondiv--backbutton">X</button>
                 </div>
+                <div class="container__gallerycontainers-sharediv">
+                    <button class="container__gallerycontainers-sharediv--sharebtn">Share Me</button>
+                </div>
             </div>
         </section>
 
@@ -231,10 +254,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="scripts/load.js"></script>
     <script src="scripts/navbar.js"></script>
     <script src="scripts/goonies.js"></script>
     <script src="scripts/credits.js"></script>
     <script src="scripts/gallery.js"></script>
+    <script src="scripts/footer.js"></script>
     <script src="scripts/script.js" defer></script>
 </body>
 </html>

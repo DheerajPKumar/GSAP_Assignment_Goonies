@@ -1,0 +1,68 @@
+.container{
+    position: relative;
+    width: 100%;
+    &__navigation{
+        position: fixed;
+        z-index: 10000;
+        bottom: 7%;
+        left: 7%;
+        width: 85%;
+        // box-sizing: content-box;
+
+        &-buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-images{
+           width: 15px;
+           height: 15px;
+           object-fit: contain;
+           border-radius: 50%;
+           cursor: pointer;
+           box-sizing: content-box;
+        }
+
+        &-skullcontainer{
+            position: relative;
+        }
+
+        &-skullimage{
+            display: block;
+            width: 15px;
+            height: 15px;
+            padding: 7px;
+        }
+
+        &-skullcontainer::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 0.1px solid $color-white;
+            border-radius: 50%;
+            animation: borderFade 1.5s infinite;
+            // animation-delay: 5s;
+        }
+
+        @keyframes borderFade {
+            0% {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-width: 0.1px;
+            }
+            100% {
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                border-width: 0.1px;
+                opacity: 0;
+            }
+        }
+    }
+}
