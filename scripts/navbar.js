@@ -1,5 +1,6 @@
 gsap.to(".container__navbar-progress", {
-    x: 0,
+    // x: 0,
+    left: "11%",
     opacity:1,
     scrollTrigger: {
         trigger: ".container__plotsection-textcontainer", 
@@ -12,7 +13,8 @@ gsap.to(".container__navbar-progress", {
 });
 
 gsap.to(".container__navbar-progress", {
-    x: 310,
+    // x: 310,
+    left: "36%",
     scrollTrigger: {
         trigger: ".container__goonies",
         start: "top 80%",
@@ -24,9 +26,11 @@ gsap.to(".container__navbar-progress", {
 });
 
 gsap.fromTo(".container__navbar-progress", {
-    x: 310,
+    // x: 310,
+    left: "36%",
 }, {
-    x: 635,
+    // x: 635,
+    left: "62%",
     scrollTrigger: {
         trigger: ".container__credits1",
         start: "top 80%",
@@ -37,9 +41,11 @@ gsap.fromTo(".container__navbar-progress", {
     }
 });
 gsap.fromTo(".container__navbar-progress", {
-    x: 635,
+    // x: 635,
+    left: "62%",
 }, {
-    x: 960,
+    // x: 960,
+    left: "87%",
     scrollTrigger: {
         trigger: ".gallery",
         start: "top 80%",
